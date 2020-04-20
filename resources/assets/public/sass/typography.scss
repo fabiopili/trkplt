@@ -1,0 +1,100 @@
+/*
+-----------------------------------------------------------------------
+TYPOGRAPHY
+-----------------------------------------------------------------------
+*/
+
+h1 {
+	font-family: 'Inter', sans-serif;
+	font-variation-settings: 'wght' 700;
+	font-size: 28px;
+	padding: 0;
+	margin: 0;
+}
+
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 22px;
+	letter-spacing: 0.666px;
+	font-variation-settings: 'wght' 600;
+	text-rendering: optimizeLegibility;
+	padding: 0px 0px 12px 0px;
+	border-bottom: 1px solid rgba(100,100,100,0.4);
+}
+
+/*
+-----------------------------------------------------------------------
+Links
+-----------------------------------------------------------------------
+*/
+a {
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:link {
+	color: $textColor;
+	border-bottom: 1px solid $accentColor;
+	box-shadow: inset 0 -1px 0 $accentColor;
+}
+
+a:visited {
+	color: $textColor;
+	border-bottom: 1px solid $accentColor;
+	box-shadow: inset 0 -1px 0 $accentColor;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+a:active {
+	color: $textColor;
+	border-bottom: 1px solid $accentColor;
+	box-shadow: inset 0 -1px 0 $accentColor;
+}
+
+a:hover,
+a:focus {
+	color: $textColor;
+	border-bottom: 1px solid $accentColor;
+	box-shadow: inset 0 -1px 0 $accentColor;
+}
+
+a img {
+    border: 0;
+    box-shadow: none;
+}
+
+a.noline {
+	border: 0;
+	box-shadow: none;
+}
+
+
+/*
+-----------------------------------------------------------------------
+Style definitions
+-----------------------------------------------------------------------
+*/
+.highlight {
+	font-variation-settings: 'wght' 600;
+	color: inherit;
+	border-bottom: 1px solid rgb(255, 220, 0);
+	box-shadow: inset 0 -1px 0 rgb(255, 220, 0);
+}
+
+/*
+-----------------------------------------------------------------------
+MEDIUM AND LARGE SPECIFIC
+-----------------------------------------------------------------------
+*/
+@media screen and (min-width: $mediumBreakpoint) {
+
+	h2 {
+		font-size: 28px;
+	}
+
+}

@@ -1,0 +1,85 @@
+/*
+-----------------------------------------------------------------------
+FOOTER
+-----------------------------------------------------------------------
+*/
+
+footer {
+
+	display: grid;
+	grid-template-rows: repeat(3, 1fr);
+	row-gap: 24px;
+	justify-items: center;
+	align-items: center;
+	padding: 48px 32px 0px 32px;
+
+	.icon {
+
+		margin: 0px 4px;
+		use {
+			fill: $baseColor;
+		}
+
+	}
+
+	a .icon:hover use {
+		fill: $accentColor;
+	}
+
+	.column {
+	}
+
+	.left {
+		justify-self: center;
+	}
+
+	.center {
+		justify-self: center;
+		text-align: center;
+		line-height: 1.6;
+	}
+
+	.right {
+		justify-self: center;
+	}
+
+	.piliLogo {
+		height: 32px;
+		width: auto;
+	}
+
+}
+
+/*
+-----------------------------------------------------------------------
+MEDIUM AND LARGE SPECIFIC
+-----------------------------------------------------------------------
+*/
+@media screen and (min-width: $mediumBreakpoint) {
+
+	footer {
+		display: grid;
+		grid-template-rows: 1fr;
+		grid-template-columns: 120px 1fr 120px;
+		justify-items: start;
+		align-items: center;
+		padding: 48px 32px 32px 32px;
+	}
+
+	.left {
+		justify-self: start;
+	}
+
+	.center {
+		justify-self: center;
+	}
+
+	.right {
+		justify-self: end;
+
+		.icon {
+			margin: 0px 0px 0px 12px;
+		}
+	}
+
+}

@@ -1,0 +1,158 @@
+/*
+-----------------------------------------------------------------------
+RESULTS
+-----------------------------------------------------------------------
+*/
+.results {
+	width: 100%;
+	padding: 16px 0px 0px 0px;
+	position: relative;
+
+	h2 {
+		margin-bottom: 0px;
+	}
+
+	.result {
+		display: grid;
+		grid-template-rows: 1fr;
+		grid-template-columns: 1fr 60px 60px;
+		column-gap: 6px;
+		justify-items: start;
+		align-items: center;
+		border-bottom: 1px solid $baseLightColor;
+		padding: 32px 0px 16px 0px;
+		cursor: pointer;
+		position: relative;
+		transition: all 0.2s ease-in-out;
+		color: $textColor;
+
+		.host {
+			font-size: 16px;
+			letter-spacing: 0.666px;
+			font-variation-settings: 'wght' 360;
+			text-rendering: optimizeLegibility;
+			max-width: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		.summary {
+			display: none;
+		}
+
+		.bar {
+			height: 4px;
+			width: 100%;
+			background-color: $accentLightColor;
+			visibility: hidden;
+		}
+
+		.bar .progress {
+			height: 4px;
+			width: 0%;
+			background-color: $blockedColor;
+		}
+
+		.commands {
+			text-align: right;
+			justify-self: end;
+		}
+
+		.icon {
+			use {
+				transition: all 0.2s ease-in-out;
+				fill: rgb(190,190,190);
+			}
+		}
+
+		.inlineLoader {
+			height: 12px;
+			width: auto;
+		}
+
+	}
+
+	.result:first-child {
+		padding-top: 0px;
+	}
+
+	.result:hover {
+
+		border-bottom: 1px solid $baseColor;
+
+		.icon {
+
+			use {
+				fill: $baseColor;
+			}
+
+		}
+
+	}
+
+	// Ready result
+	.result.done {
+
+		.bar {
+			visibility: visible;
+		}
+
+	}
+
+}
+
+.credits {
+	text-align: center;
+	padding: 32px 0px 32px 0px;
+	border-top: 1px solid $baseLightColor;
+
+	.byline {
+		line-height: 1.5;
+	}
+
+	img {
+		height: 96px;
+		width: auto;
+		margin-bottom: 16px;
+	}
+}
+
+/*
+-----------------------------------------------------------------------
+MEDIUM AND LARGE SPECIFIC
+-----------------------------------------------------------------------
+*/
+@media screen and (min-width: $mediumBreakpoint) {
+
+	.results {
+
+		.result {
+			display: grid;
+			grid-template-rows: 1fr;
+			grid-template-columns: 1fr 180px 180px 54px;
+			column-gap: 12px;
+
+			.host {
+				font-size: 18px;
+			}
+
+			.summary {
+				display: block;
+				padding-left: 32px;
+				font-variation-settings: 'wght' 360;
+				justify-self: end;
+
+				span {
+					font-variation-settings: 'wght' 520;
+				}
+
+				.isError {
+					color: $blockedColor;
+				}
+			}
+
+		}
+	}
+
+}

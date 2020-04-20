@@ -1,0 +1,66 @@
+version: "3.1"
+services:
+
+  app:
+    container_name: trkplt_app
+    build:
+      context: ./
+      dockerfile: docker/app.docker
+    working_dir: /srv/www/trkplt
+    volumes:
+      - .:/srv/www/trkplt:delegated
+      - ./docker/php/php.ini.overrides:/etc/php/7.4/fpm/conf.d/99-overrides.ini:delegated
+    environment:
+      - "DB_PORT=3306"
+      - "DB_HOST=database"
+
+  webserver:
+    container_name: trkplt_webserver
+    build:
+      context: ./
+      dockerfile: docker/web.docker
+    working_dir: /srv/www/trkplt
+    volumes:
+      - .:/srv/www/trkplt:delegated
+      - ./docker/nginx/sites-enabled:/etc/nginx/sites-enabled:delegated
+      - ./docker/nginx/fastcgi_params:/etc/nginx/fastcgi_params:delegated
+      - ./docker/nginx/mime.types:/etc/nginx/mime.types:delegated
+      - ./docker/nginx/conf.d:/etc/nginx/conf.d:delegated
+      - ./docker/nginx/global:/etc/nginx/global:delegated
+      - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf:delegated
+    ports:
+     - "80:80"
+
+  database:
+    container_name: trkplt_database
+    build:
+      context: ./
+      dockerfile: docker/database.docker
+    working_dir: /srv/www/trkplt
+    volumes:
+      - ./storage/db:/var/lib/mysql:delegated
+    environment:
+      - MYSQL_ROOT_PASSWORD=trkplt
+      - MYSQL_DATABASE=trkplt
+      - MYSQL_USER=trkplt
+      - MYSQL_PASSWORD=trkplt
+    ports:
+      - "8083:3306"
+
+  redis:
+    container_name: trkplt_redis
+    build:
+      context: ./
+      dockerfile: docker/redis.docker
+
+  node:
+    container_name: trkplt_node
+    build:
+      context: ./
+      dockerfile: docker/node.docker
+    command: nodemon --watch . -e js,html app.js
+    working_dir: /srv/www/trkplt
+    volumes:
+      - ./puppeteer-bridge:/srv/www/trkplt:delegated
+    ports:
+     - "4444:4444"

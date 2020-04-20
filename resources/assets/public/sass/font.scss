@@ -1,0 +1,19 @@
+/*
+-----------------------------------------------------------------------
+FONT
+-----------------------------------------------------------------------
+Subsetting
+
+pyftsubset Inter.otf \
+--unicodes="U+0020-007F,U+00A0-00FF,U+0100-017F,U+2192" \
+--flavor="woff2" \
+--output-file="Inter.woff2"
+
+*/
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/assets/trkplt/fonts/Inter.woff2') format('woff2');
+  font-weight: 1 999;
+  font-display: swap;
+}

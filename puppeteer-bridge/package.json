@@ -1,0 +1,21 @@
+{
+  "name": "API",
+  "version": "1.0.0",
+  "description": "Local Node environment for TRKPLT.com",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "puppeteer-core": "^2.1.1"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

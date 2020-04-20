@@ -1,0 +1,131 @@
+/*
+-----------------------------------------------------------------------
+VISIBILITY
+-----------------------------------------------------------------------
+http://foundation.zurb.com/sites/docs/visibility.html
+*/
+
+/**
+ * Foundation for Sites by ZURB
+ * Version 6.1.1
+ * foundation.zurb.com
+ * Licensed under MIT Open Source
+ */
+
+@media screen and (min-width: 0em) and (max-width: $mediumBreakpoint) {
+    .hide-for-small-only {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 0em),
+screen and (min-width: $mediumBreakpoint) {
+    .show-for-small-only {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: $mediumBreakpoint) {
+    .hide-for-medium {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: $mediumBreakpoint) {
+    .show-for-medium {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: $mediumBreakpoint) and (max-width: $largeBreakpoint) {
+    .hide-for-medium-only {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: $mediumBreakpoint),
+screen and (min-width: $largeBreakpoint) {
+    .show-for-medium-only {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: $largeBreakpoint) {
+    .hide-for-large {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: $largeBreakpoint) {
+    .show-for-large {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: $largeBreakpoint) {
+    .hide-for-large-only {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: $largeBreakpoint) {
+    .show-for-large-only {
+        display: none !important;
+    }
+}
+
+.show-for-sr,
+.show-on-focus {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+.show-on-focus:active,
+.show-on-focus:focus {
+    position: static !important;
+    height: auto;
+    width: auto;
+    overflow: visible;
+    clip: auto;
+}
+
+.show-for-landscape,
+.hide-for-portrait {
+    display: block !important;
+}
+
+@media screen and (orientation: landscape) {
+    .show-for-landscape,
+    .hide-for-portrait {
+        display: block !important;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .show-for-landscape,
+    .hide-for-portrait {
+        display: none !important;
+    }
+}
+
+.hide-for-landscape,
+.show-for-portrait {
+    display: none !important;
+}
+
+@media screen and (orientation: landscape) {
+    .hide-for-landscape,
+    .show-for-portrait {
+        display: none !important;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .hide-for-landscape,
+    .show-for-portrait {
+        display: block !important;
+    }
+}

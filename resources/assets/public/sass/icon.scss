@@ -1,0 +1,44 @@
+/*
+-----------------------------------------------------------------------
+ICONS
+-----------------------------------------------------------------------
+*/
+
+#svg-icons-container {
+	display: none
+}
+
+#svg-icons-container svg {
+	width: 0;
+	height: 0;
+}
+
+.icon {
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+}
+
+.size16.icon {
+	width: 16px;
+	height: 16px;
+}
+
+.size24.icon {
+	width: 24px;
+	height: 24px;
+}
+
+.size32.icon {
+	width: 32px;
+	height: 32px;
+}
+
+.size48.icon {
+	width: 48px;
+	height: 48px;
+}
+
+a .icon:hover use {
+  fill: rgba(0,0,0,1);
+}
