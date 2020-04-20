@@ -164,16 +164,27 @@ MAIN APP COMPONENT
 		  	results: null,
 		  	sampleResults: {
 		  		0: {
-		  			id: '121740723',
-		  			created_at: '2020-04-16T21:13:21.000000Z',
-		  			url: 'https://www.nytimes.com/',
-		  			host: 'nytimes.com',
-		  			nu_blocked: 37,
-		  			nu_allowed: 27,
+		  			id: '1623423519',
+		  			created_at: "2020-04-20T22:09:53.000000Z",
+		  			url: 'https://www.washingtonpost.com/',
+		  			host: 'washingtonpost.com',
+		  			nu_blocked: 51,
+		  			nu_allowed: 24,
 		  			is_processing: false,
 		  			is_done: true,
 		  			is_error: false
-		  		}
+		  		},
+		  		1: {
+		  			id: '1394556212',
+		  			created_at: "2020-04-20T22:06:38.000000Z",
+		  			url: 'https://www.nytimes.com/',
+		  			host: 'nytimes.com',
+		  			nu_blocked: 39,
+		  			nu_allowed: 26,
+		  			is_processing: false,
+		  			is_done: true,
+		  			is_error: false
+		  		},
 		  	},
 		  }
 		},
