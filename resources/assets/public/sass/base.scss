@@ -159,6 +159,13 @@ MEDIUM AND LARGE SPECIFIC
 */
 @media screen and (min-width: $mediumBreakpoint) {
 
+	#main {
+		.mainContent {
+			position: relative;
+			padding: 0px 32px 72px 32px;
+		}
+	}
+
 	.why {
 
 		padding: 32px 0px 32px 0px;
