@@ -7,7 +7,10 @@ HEADER COMPONENT
 <template>
 	<div class="header">
 		<div class="content">
-			<h1 class="tagline">Test a <span>website</span> against the most popular <span>ad blocking</span> lists</h1>
+			<h1 class="tagline">
+				<span class="nowrap">Test a <span class="highlight">website</span> against the</span>
+				<span class="nowrap">most popular <span class="highlight">ad blocking</span> lists</span>
+			</h1>
 			<div class="controls">
 				<form method="POST" action="#" @submit.prevent="onSubmit">
 					<input type="text" id="url" name="url" placeholder="https://" v-model="url">

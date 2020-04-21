@@ -8,10 +8,11 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width, user-scalable=yes" />
     <meta name="referrer" content="origin">
 
-    <meta name="theme-color" content="#19191A">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#19191A">
+    <meta name="theme-color" content="#342865">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#342865">
 
-	<meta name="description" content="">
+    <meta name="description" content="Test a website against the most popular ad blocking lists and list all web trackers found.">
 
 	<meta name="csrf-token" content="{{ csrf_token() }}" />
 
