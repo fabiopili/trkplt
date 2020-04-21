@@ -203,6 +203,8 @@ SINGLE RESULT DETAILS
 
 	.requestContent {
 		padding: 12px 0px 0px 0px;
+		max-width: 100%;
+		overflow-x: hidden;
 	}
 
 	.categories {
