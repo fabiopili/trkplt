@@ -12,7 +12,7 @@ TRKPLT is a tool that allows developers to test a website for resources that wou
 - Vue.js as the frontend framework for the web app.
 - NPM as the module bundler, webpack, SASS, svg-spritemap-webpack-plugin for handling frontend assets.
 - Node.js, Express and Javascript to run the intermediary API that acts as a bridge between the main app logic and the headless browsers. This API is bound to localhost and not accessible publicly.
-– Puppeteer for interacting with the headless Chrome browser workers.
+- Puppeteer for interacting with the headless Chrome browser workers.
 - Modern PHP and the Laravel framework for the public-facing API and all main app logic like: routing, controllers, models, ORM for database interaction, event bus, communication with queues, etc.
 - Redis for queues and caching.
 - Docker for the local development environment.
@@ -35,6 +35,7 @@ Consider this: depending on the source, between 11% and 47% of all internet user
 
 Please consider this project as work-in-progress.
 
+- Implement navigation between main app and results page.
 - Code review, better documentation.
 - Better Unit testing coverage.
 
@@ -51,6 +52,10 @@ Please consider this project as work-in-progress.
 - Parse domains from lists in filter format (DOM), like EasyList.
 - Allow users to customize the ad blocking lists used for testing.
 - Script more advanced browser interactions, such as submitting a login page.
+
+## Data sources
+
+Tracker data provided by [DuckDuckGo Tracker Radar](https://github.com/duckduckgo/tracker-radar).
 
 ## License
 
