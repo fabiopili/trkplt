@@ -12,7 +12,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="#342865">
 
-    <meta name="description" content="Test a website against the most popular ad blocking lists and list all web trackers found.">
+    <meta name="description" content="Test a website with the most popular ad blocking lists and list all web trackers found.">
 
 	<meta name="csrf-token" content="{{ csrf_token() }}" />
 

@@ -8,7 +8,7 @@ HEADER COMPONENT
 	<div class="header">
 		<div class="content">
 			<h1 class="tagline">
-				<span class="nowrap">Test a <span class="highlight">website</span> against the</span>
+				<span class="nowrap">Test a <span class="highlight">website</span> with the</span>
 				<span class="nowrap">most popular <span class="highlight">ad blocking</span> lists</span>
 			</h1>
 			<div class="controls">
