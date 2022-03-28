@@ -15,6 +15,7 @@ yarn-error.log
 /serverConf
 /public/mix-manifest.json
 /public/assets/trkplt/**
+/public/vendor
 # Node
 /puppeteer-bridge/.env
 /puppeteer-bridge/node_modules
