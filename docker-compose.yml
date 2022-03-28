@@ -9,7 +9,8 @@ services:
     working_dir: /srv/www/trkplt
     volumes:
       - .:/srv/www/trkplt:delegated
-      - ./docker/php/php.ini.overrides:/etc/php/7.4/fpm/conf.d/99-overrides.ini:delegated
+      - ./docker/php/php.ini.overrides:/etc/php/8.0/fpm/conf.d/99-overrides.ini:delegated
+      - ./docker/php/www.conf.overrides:/etc/php/8.0/fpm/pool.d/zz-overrides.conf:cached
     environment:
       - "DB_PORT=3306"
       - "DB_HOST=database"
@@ -39,6 +40,7 @@ services:
     working_dir: /srv/www/trkplt
     volumes:
       - ./storage/db:/var/lib/mysql:delegated
+      - ./docker/mariadb/conf.d:/etc/mysql/conf.d:cached
     environment:
       - MYSQL_ROOT_PASSWORD=trkplt
       - MYSQL_DATABASE=trkplt

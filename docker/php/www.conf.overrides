@@ -1,0 +1,5 @@
+[global]
+process_control_timeout = 240
+
+[www]
+request_terminate_timeout = 240

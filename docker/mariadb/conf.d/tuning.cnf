@@ -1,0 +1,10 @@
+# Custom tuning
+[mariadbd]
+query_cache_type = 1
+query_cache_size = 16M
+query_cache_limit = 4M
+tmp_table_size = 32M
+max_heap_table_size = 32M
+key_buffer_size = 32M
+innodb_buffer_pool_size = 320M
+innodb_log_file_size = 32M
