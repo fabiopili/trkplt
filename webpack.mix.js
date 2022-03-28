@@ -22,6 +22,18 @@ mix.js([
     'resources/assets/public/js/font.js',
 ],
 'public/assets/trkplt/js/app.js')
+.vue({ version: 2 })
+// https://github.com/vuejs/vue-next/tree/master/packages/vue#bundler-build-feature-flags
+.webpackConfig((webpack) => {
+    return {
+        plugins: [
+            new webpack.DefinePlugin({
+                __VUE_OPTIONS_API__: true,
+                __VUE_PROD_DEVTOOLS__: false,
+            }),
+        ],
+    };
+})
 .version();
 
 // SASS
@@ -61,20 +73,37 @@ mix.webpackConfig({
         new SVGSpritemapPlugin(
         	'resources/assets/public/icons/*.svg',
         {
-        	output: {
-        		'filename': 'assets/trkplt/icons/icons.svg',
+            output: {
+                'filename': 'assets/trkplt/icons/icons.svg',
+                // https://github.com/cascornelissen/svg-spritemap-webpack-plugin/issues/63
+                chunk: {
+                    keep: true
+                },
                 'svgo': {
                     'plugins': [
-                        { cleanupIDs: false }, // Disable ID renaming
-                        { removeXMLNS: true },
-                        { removeDimensions: true },
-                        { removeTitle: true },
+                        {
+                            name: 'cleanupIDs',
+                            active: false
+                        },
+                        {
+                            name: 'removeXMLNS',
+                            active: true
+                        },
+                        {
+                            name: 'removeDimensions',
+                            active: true
+                        },
+                        {
+                            name: 'removeTitle',
+                            active: true
+                        }
                     ]
                 }
             },
-        	sprite: {
-        		'prefix': 'icon-',
-        	}
-        })
+            sprite: {
+                'prefix': 'icon-',
+            }
+
+        }),
     ]
 });
