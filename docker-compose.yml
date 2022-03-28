@@ -45,7 +45,7 @@ services:
       - MYSQL_USER=trkplt
       - MYSQL_PASSWORD=trkplt
     ports:
-      - "8083:3306"
+      - "8081:3306"
 
   redis:
     container_name: trkplt_redis
