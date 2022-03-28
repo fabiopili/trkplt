@@ -40,6 +40,7 @@ class UpdateList extends Command
 
         // Init PHP Domain Parser
         // https://github.com/jeremykendall/php-domain-parser
+        // TODO: Breaking change - upgrade to v6.
         $this->DomainParser = new \Pdp\Manager(new \Pdp\Cache(), new \Pdp\CurlHttpClient());
         $this->DomainParserRules = $this->DomainParser->getRules();
 
